@@ -26,188 +26,160 @@
 				<!-- ==========Share========== -->
 				<div id="share" class="content">
 					<div class="blog__all-list">
-						<div class="blog__all-item">
-							<a href="#">
-								<div class="blog__item-img">
-									<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/blogs/blog-img1.png" alt="">
-								</div>
-								<div class="blog__item-content">
-									<h3 class="blog__item-title">NHÌN LẠI BUỔI WORKSHOP “LAY CẢM XÚC” NHẤT TUẦN QUA</h3>
-									<span>23/12/2022</span>
-								</div>
-							</a>
-						</div>
-						<div class="blog__all-item">
-							<a href="#">
-								<div class="blog__item-img">
-									<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/blogs/blog-img2.png" alt="">
-								</div>
-								<div class="blog__item-content">
-									<h3 class="blog__item-title">Người trẻ Trung Quốc thích gõ mõ trực tuyến</h3>
-									<span>23/12/2022</span>
-								</div>
-							</a>
-						</div>
-						<div class="blog__all-item">
-							<a href="#">
-								<div class="blog__item-img">
-									<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/blogs/blog-img3.png" alt="">
-								</div>
-								<div class="blog__item-content">
-									<h3 class="blog__item-title">Những xu hướng du lịch thế giới năm 2022</h3>
-									<span>23/12/2022</span>
-								</div>
-							</a>
-						</div>
-						<div class="blog__all-item">
-							<a href="#">
-								<div class="blog__item-img">
-									<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/blogs/blog-img4.png" alt="">
-								</div>
-								<div class="blog__item-content">
-									<h3 class="blog__item-title">TikTok công bố bảng tổng kết Year On TikTok 2022</h3>
-									<span>23/12/2022</span>
-								</div>
-							</a>
-						</div>
+					<?php
+                        $args = array(
+                                'post_type' => 'post',
+								'posts_per_page' => '4',
+                                'order' => 'DESC',
+                                'tax_query' => [
+                                    [
+                                        'taxonomy' => 'category',
+                                        'terms' => 10,
+                                        
+                                    ] 
+                                ],
+                        );
+                        $post_query = new WP_Query($args);
+                        
+                        if($post_query->have_posts() ) {
+                            while($post_query->have_posts() ) {
+                                        $post_query->the_post();
+								?>
+									<div class="blog__all-item">
+										<a href="<?php the_permalink() ?>">
+											<div class="blog__item-img">
+												<?php the_post_thumbnail() ?>
+											</div>
+											<div class="blog__item-content">
+												<h3 class="blog__item-title"><?php the_title(); ?></h3>
+												<span><?php echo get_the_date('d/m/Y'); ?></span>
+											</div>
+										</a>
+									</div>
+								<?php
+							}
+						}
+					?>
 					</div>
 				</div>
 
 				<!-- ==========trend========== -->
 				<div id="trend" class="content">
 					<div class="blog__all-list">
-						<div class="blog__all-item">
-							<div class="blog__item-img">
-								<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/blogs/blog-img1.png" alt="">
-							</div>
-							<div class="blog__item-content">
-								<h3 class="blog__item-title">NHÌN LẠI BUỔI WORKSHOP “LAY CẢM XÚC” NHẤT TUẦN QUA</h3>
-								<span>23/12/2022</span>
-							</div>
-
-						</div>
-						<div class="blog__all-item">
-							<div class="blog__item-img">
-								<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/blogs/blog-img2.png" alt="">
-							</div>
-							<div class="blog__item-content">
-								<h3 class="blog__item-title">Người trẻ Trung Quốc thích gõ mõ trực tuyến</h3>
-								<span>23/12/2022</span>
-							</div>
-
-						</div>
-						<div class="blog__all-item">
-							<div class="blog__item-img">
-								<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/blogs/blog-img3.png" alt="">
-							</div>
-							<div class="blog__item-content">
-								<h3 class="blog__item-title">Những xu hướng du lịch thế giới năm 2022</h3>
-								<span>23/12/2022</span>
-							</div>
-
-						</div>
-						<div class="blog__all-item">
-							<div class="blog__item-img">
-								<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/blogs/blog-img4.png" alt="">
-							</div>
-							<div class="blog__item-content">
-								<h3 class="blog__item-title">TikTok công bố bảng tổng kết Year On TikTok 2022</h3>
-								<span>23/12/2022</span>
-							</div>
-
-						</div>
+					<?php
+                        $args = array(
+                                'post_type' => 'post',
+								'posts_per_page' => '4',
+                                'order' => 'DESC',
+                                'tax_query' => [
+                                    [
+                                        'taxonomy' => 'category',
+                                        'terms' => 1,
+                                        
+                                    ] 
+                                ],
+                        );
+                        $post_query = new WP_Query($args);
+                        
+                        if($post_query->have_posts() ) {
+                            while($post_query->have_posts() ) {
+                                        $post_query->the_post();
+								?>	
+								<div class="blog__all-item">
+									<a href="<?php the_permalink() ?>">
+										<div class="blog__item-img">
+											<?php the_post_thumbnail() ?>
+										</div>
+										<div class="blog__item-content">
+											<h3 class="blog__item-title"><?php the_title(); ?></h3>
+											<span><?php echo get_the_date('d/m/Y'); ?></span>
+										</div>
+									</a>
+								</div>
+								<?php
+							}
+						}
+					?>	
 					</div>
 				</div>
 
 				<!-- ==========work========== -->
 				<div id="work" class="content">
 					<div class="blog__all-list">
-						<div class="blog__all-item">
-							<div class="blog__item-img">
-								<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/blogs/blog-img1.png" alt="">
-							</div>
-							<div class="blog__item-content">
-								<h3 class="blog__item-title">NHÌN LẠI BUỔI WORKSHOP “LAY CẢM XÚC” NHẤT TUẦN QUA</h3>
-								<span>23/12/2022</span>
-							</div>
-
-						</div>
-						<div class="blog__all-item">
-							<div class="blog__item-img">
-								<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/blogs/blog-img2.png" alt="">
-							</div>
-							<div class="blog__item-content">
-								<h3 class="blog__item-title">Người trẻ Trung Quốc thích gõ mõ trực tuyến</h3>
-								<span>23/12/2022</span>
-							</div>
-
-						</div>
-						<div class="blog__all-item">
-							<div class="blog__item-img">
-								<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/blogs/blog-img3.png" alt="">
-							</div>
-							<div class="blog__item-content">
-								<h3 class="blog__item-title">Những xu hướng du lịch thế giới năm 2022</h3>
-								<span>23/12/2022</span>
-							</div>
-
-						</div>
-						<div class="blog__all-item">
-							<div class="blog__item-img">
-								<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/blogs/blog-img4.png" alt="">
-							</div>
-							<div class="blog__item-content">
-								<h3 class="blog__item-title">TikTok công bố bảng tổng kết Year On TikTok 2022</h3>
-								<span>23/12/2022</span>
-							</div>
-
-						</div>
+					<?php
+                        $args = array(
+                                'post_type' => 'post',
+								'posts_per_page' => '4',
+                                'order' => 'DESC',
+                                'tax_query' => [
+                                    [
+                                        'taxonomy' => 'category',
+                                        'terms' => 12,
+                                        
+                                    ] 
+                                ],
+                        );
+                        $post_query = new WP_Query($args);
+                        
+                        if($post_query->have_posts() ) {
+                            while($post_query->have_posts() ) {
+                                        $post_query->the_post();
+								?>	
+								<div class="blog__all-item">
+									<a href="<?php the_permalink() ?>">
+										<div class="blog__item-img">
+											<?php the_post_thumbnail() ?>
+										</div>
+										<div class="blog__item-content">
+											<h3 class="blog__item-title"><?php the_title(); ?></h3>
+											<span><?php echo get_the_date('d/m/Y'); ?></span>
+										</div>
+									</a>
+								</div>
+								<?php
+							}
+						}
+					?>	
 					</div>
 				</div>
 
 				<!-- ==========casestudies========== -->
 				<div id="casestudies" class="content">
 					<div class="blog__all-list">
-						<div class="blog__all-item">
-							<div class="blog__item-img">
-								<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/blogs/blog-img1.png" alt="">
-							</div>
-							<div class="blog__item-content">
-								<h3 class="blog__item-title">NHÌN LẠI BUỔI WORKSHOP “LAY CẢM XÚC” NHẤT TUẦN QUA</h3>
-								<span>23/12/2022</span>
-							</div>
-
-						</div>
-						<div class="blog__all-item">
-							<div class="blog__item-img">
-								<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/blogs/blog-img2.png" alt="">
-							</div>
-							<div class="blog__item-content">
-								<h3 class="blog__item-title">Người trẻ Trung Quốc thích gõ mõ trực tuyến</h3>
-								<span>23/12/2022</span>
-							</div>
-
-						</div>
-						<div class="blog__all-item">
-							<div class="blog__item-img">
-								<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/blogs/blog-img3.png" alt="">
-							</div>
-							<div class="blog__item-content">
-								<h3 class="blog__item-title">Những xu hướng du lịch thế giới năm 2022</h3>
-								<span>23/12/2022</span>
-							</div>
-
-						</div>
-						<div class="blog__all-item">
-							<div class="blog__item-img">
-								<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/blogs/blog-img4.png" alt="">
-							</div>
-							<div class="blog__item-content">
-								<h3 class="blog__item-title">TikTok công bố bảng tổng kết Year On TikTok 2022</h3>
-								<span>23/12/2022</span>
-							</div>
-
-						</div>
+					<?php
+                        $args = array(
+                                'post_type' => 'post',
+								'posts_per_page' => '4',
+                                'order' => 'DESC',
+                                'tax_query' => [
+                                    [
+                                        'taxonomy' => 'category',
+                                        'terms' => 11,
+                                        
+                                    ] 
+                                ],
+                        );
+                        $post_query = new WP_Query($args);
+                        
+                        if($post_query->have_posts() ) {
+                            while($post_query->have_posts() ) {
+                                        $post_query->the_post();
+								?>	
+								<div class="blog__all-item">
+									<a href="<?php the_permalink() ?>">
+										<div class="blog__item-img">
+											<?php the_post_thumbnail() ?>
+										</div>
+										<div class="blog__item-content">
+											<h3 class="blog__item-title"><?php the_title(); ?></h3>
+											<span><?php echo get_the_date('d/m/Y'); ?></span>
+										</div>
+									</a>
+								</div>
+								<?php
+							}
+						}
+					?>	
 					</div>
 				</div>
 
@@ -217,77 +189,39 @@
 					<h3>Bài viết gần đây</h3>
 				</div>
 				<div class="blog__recentposts-list">
-					<div class="blog__recentposts-item">
-						<div class="recentposts-left">
-							<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/blogs/recentposts-img1.png" alt="">
-						</div>
-						<div class="recentposts-right">
-							<span class="recentpost-time"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/blogs/icon-clock.png"
-									alt="">23/12/2022</span>
-							<p class="recentpost-tt">Viettel tung gói cước Internet sử dụng Wi-Fi 6 với tốc độ tới 1Gbps
-							</p>
-							<a href="#">
-								<button class="recentpost-btn">Xem thêm <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/blogs/icon-arrow.png"
-										alt=""></button>
-							</a>
-						</div>
-					</div>
-					<div class="blog__recentposts-item">
-						<div class="recentposts-left">
-							<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/blogs/recentposts-img2.png" alt="">
-						</div>
-						<div class="recentposts-right">
-							<span class="recentpost-time"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/blogs/icon-clock.png"
-									alt="">18/12/2022</span>
-							<p class="recentpost-tt">Loạt ảnh "thả thính" của TikToker Quỳnh Alee nhận "bão like"</p>
-							<a href="#">
-								<button class="recentpost-btn">Xem thêm <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/blogs/icon-arrow.png"
-										alt=""></button>
-							</a>
-						</div>
-					</div>
-					<div class="blog__recentposts-item">
-						<div class="recentposts-left">
-							<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/blogs/recentposts-img3.png" alt="">
-						</div>
-						<div class="recentposts-right">
-							<span class="recentpost-time"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/blogs/icon-clock.png"
-									alt="">07/12/2022</span>
-							<p class="recentpost-tt">Trợ năng mới trên iPhone phản tác dụng so với mục đích ra đời</p>
-							<a href="#">
-								<button class="recentpost-btn">Xem thêm <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/blogs/icon-arrow.png"
-										alt=""></button>
-							</a>
-						</div>
-					</div>
-					<div class="blog__recentposts-item">
-						<div class="recentposts-left">
-							<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/blogs/recentposts-img4.png" alt="">
-						</div>
-						<div class="recentposts-right">
-							<span class="recentpost-time"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/blogs/icon-clock.png"
-									alt="">18/12/2022</span>
-							<p class="recentpost-tt">Mỹ cấm cài đặt TikTok trên các thiết bị?</p>
-							<a href="#">
-								<button class="recentpost-btn">Xem thêm <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/blogs/icon-arrow.png"
-										alt=""></button>
-							</a>
-						</div>
-					</div>
-					<div class="blog__recentposts-item">
-						<div class="recentposts-left">
-							<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/blogs/recentposts-img5.png" alt="">
-						</div>
-						<div class="recentposts-right">
-							<span class="recentpost-time"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/blogs/icon-clock.png"
-									alt="">07/12/2022</span>
-							<p class="recentpost-tt">Quốc hội Mỹ chuẩn bị ‘xuất chiêu’ với TikTok</p>
-							<a href="#">
-								<button class="recentpost-btn">Xem thêm <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/blogs/icon-arrow.png"
-										alt=""></button>
-							</a>
-						</div>
-					</div>
+				<?php
+					$args = array(
+						'posts_per_page' => 6, /* how many post you need to display */
+						'offset' => 0,
+						'orderby' => 'post_date',
+						'order' => 'DESC',
+						'post_type' => 'post', /* your post type name */
+						'post_status' => 'publish'
+					);
+					$query = new WP_Query($args);
+					if ($query->have_posts()) :
+						while ($query->have_posts()) : $query->the_post();
+							?>
+							<div class="blog__recentposts-item">
+								<a href="<?php the_permalink() ?>">
+									<div class="recentposts-left">
+										<?php the_post_thumbnail() ?>
+									</div>
+									<div class="recentposts-right">
+										<span class="recentpost-time"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/blogs/icon-clock.png"
+												alt=""><?php echo get_the_date('d/m/Y'); ?></span>
+										<p class="recentpost-tt"><?php the_title(); ?></p>
+										<a href="<?php the_permalink() ?>">
+											<button class="recentpost-btn">Xem thêm <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/blogs/icon-arrow.png"
+													alt=""></button>
+										</a>
+									</div>
+								</a>
+							</div>
+							<?php
+						endwhile;
+					endif;
+				?>
 				</div>
 			</div>
 		</div>
@@ -298,25 +232,47 @@
 	<div class="container">
 		<div class="blog__listnews-container">
 			<h2 class="blog__listnews-heading">Tin hàng đầu trong tuần</h2>
+
 			<div class="blog__listnews-list">
-				<div class="blog__listnews-item">
-					<div class="listnews-img">
-						<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/blogs/list-newimg1.png" alt="">
-					</div>
-					<h5 class="listnew-title">FIFA tạo cuộc tranh cãi dữ dội giữa phe Messi và Cristiano Ronaldo trên
-						mạng xã hội</h5>
-					<p class="listnew-text">Tài khoản chính thức trên mạng xã hội Twitter của LĐBĐ thế giới (FIFA) phải
-						xóa liên tiếp 2 dòng tweet có liên quan tới siêu sao Lionel Messi và Cristiano Ronaldo, vì tạo
-						ra cuộc tranh luận và chỉ trích lẫn nhau rất dữ dội.</p>
-					<div class="listnew-bottom">
-						<span><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/blogs/icon-clock.png" alt="">18/12/2022</span>
-						<a href="#">
-							<button class="listnew-btn">Xem thêm <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/blogs/icon-arrow.png"
-									alt=""></button>
-						</a>
-					</div>
-				</div>
-				<div class="blog__listnews-item">
+				<?php
+					$args = array(
+							'post_type' => 'post',
+							'order' => 'DESC',
+							'tax_query' => [
+								[
+									'taxonomy' => 'category',
+									'terms' => 13,
+									
+								] 
+							],
+					);
+					$post_query = new WP_Query($args);
+					
+					if($post_query->have_posts() ) {
+						while($post_query->have_posts() ) {
+									$post_query->the_post();
+							?>		
+							<div class="blog__listnews-item">
+								<a href="<?php the_permalink() ?>">
+									<div class="listnews-img">
+										<?php the_post_thumbnail() ?>
+									</div>
+									<h5 class="listnew-title"><?php the_title(); ?></h5>
+									<p class="listnew-text"><?php echo get_post_meta($post->ID, 'short-desc', true); ?></p>
+									<div class="listnew-bottom">
+										<span><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/blogs/icon-clock.png" alt=""><?php echo get_the_date('d/m/Y'); ?></span>
+										<a href="<?php the_permalink() ?>">
+											<button class="listnew-btn">Xem thêm <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/blogs/icon-arrow.png"
+													alt=""></button>
+										</a>
+									</div>
+								</a>
+							</div>
+							<?php
+						}
+					}
+				?>	
+				<!-- <div class="blog__listnews-item">
 					<div class="listnews-img">
 						<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/blogs/list-newimg2.png" alt="">
 					</div>
@@ -400,7 +356,8 @@
 									alt=""></button>
 						</a>
 					</div>
-				</div>
+				</div> -->
+
 			</div>
 		</div>
 	</div>

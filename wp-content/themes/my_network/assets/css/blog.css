@@ -114,6 +114,7 @@
 }
 .recentposts-left img {
     border-radius: 11px;
+    height: auto;
 }
 .recentposts-right {
     max-width: 292px;
@@ -217,6 +218,7 @@
 
 .blog__all-list {
     display: flex;
+    justify-content: space-between;
     gap: 19px 14px;
     flex-wrap: wrap;
 }
@@ -236,10 +238,11 @@
     font-style: normal;
     font-weight: 900;
     font-size: 30px;
-    line-height: 36px;
+    line-height: 46px;
     letter-spacing: 0.005em;
     color: #FFFFFF;
     margin-bottom: 16px;
+    text-transform: uppercase;
 }
 .blog__all-list .blog__all-item:first-child .blog__item-content span {
     display: flex;
@@ -271,6 +274,10 @@
     letter-spacing: 0.005em;
     color: #1E293B;
     margin-bottom: 4px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
 }
 .blog__all-list .blog__all-item .blog__item-content span {
     display: flex;
@@ -302,6 +309,8 @@
 .blog__all-list .blog__all-item .blog__item-img img {
     vertical-align: top;
     border-radius: 12px;
+    width: 100%;
+    height: auto;
 }
 
 @media screen and (max-width: 1024px) {
@@ -323,6 +332,7 @@
     .blog__listpost-right {
         width: 100%;
     }
+   
 }
 @media screen and (max-width: 768px) {
     .blog__all {
@@ -356,6 +366,9 @@
         line-height: 19px;
         margin-bottom: 9px;
     }
+    .blog__all-list .blog__all-item {
+        width: calc(33.333% - 8px) ;
+    }
     #blog__listpost-nav ul li {
         outline: 1px solid #11c1eb;
         border: 2px solid transparent;
@@ -378,6 +391,7 @@
     }
     .blog__all-list .blog__all-item:first-child .blog__item-content {
         padding: 11px 100px 11px 10px;
+        width: 100%;
     }
     .blog__all-list .blog__all-item:first-child .blog__item-content span::after {
         content: url(../images/blogs/icon-clock1.png);
@@ -495,7 +509,7 @@
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
-        gap: 20px;
+        gap: 13px;
     }
     .blog__all-list .blog__all-item .blog__item-content .blog__item-title {
         font-family: var(--font-semibold);
@@ -505,6 +519,11 @@
         line-height: 17px;
         letter-spacing: 0.005em;
         color: #1E293B;
+        margin-bottom: 3px;
+    }
+    .blog__all-list .blog__all-item:first-child .blog__item-content .blog__item-title {
+        font-size: 14px;
+        line-height: 16px;
         margin-bottom: 3px;
     }
 }
@@ -564,6 +583,11 @@
 
     color: #1E293B;
     margin-bottom: 12px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+
 }
 .listnew-bottom {
     display: flex;
@@ -612,6 +636,7 @@
     max-width: 380px;
     border-radius: 12px;
 }
+
 .slick-initialized .slick-slide {
     margin:  0 10px;
 }

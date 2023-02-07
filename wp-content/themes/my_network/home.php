@@ -360,45 +360,45 @@ get_header();
                     <div class="trend__list">
 
                     <?php
-                            $args = array(
-                                    'post_type' => 'post',
-                                    'order' => 'DESC',
-                                    'tax_query' => [
-                                        [
-                                            'taxonomy' => 'category',
-                                            'terms' => 1,
-                                            
-                                        ] 
-                                    ],
-                            );
-                            $post_query = new WP_Query($args);
-                            
-                            if($post_query->have_posts() ) {
-                                    while($post_query->have_posts() ) {
-                                            $post_query->the_post();
-                                ?>
-                                    <div class="trend__item">
-                                            <a href="<?php the_permalink() ?>">
-                                                <div class="trend__img">
-                                                    <?php the_post_thumbnail() ?>
-                                                </div>
-                                            </a>
-                                            <div class="trend__details">
-                                            <a href="<?php the_permalink() ?>">
-                                                <h2 class="trend__title"><?php the_title(); ?></h2>
-                                            </a>
-                                                <div class="detail">
-                                                    
-                                                    <h6><?php echo get_the_tag_list(); ?></h6>
-                                                    <p><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/home/trend/time.png" alt=""><?php echo get_the_date('d/m/Y'); ?></p>
-                                                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/home/trend/trend-arrow.png" alt="">
-                                                </div>
-                                            </div>
+                        $args = array(
+                                'post_type' => 'post',
+                                'order' => 'DESC',
+                                'tax_query' => [
+                                    [
+                                        'taxonomy' => 'category',
+                                        'terms' => 1,
                                         
-                                    </div>
-                                    <?php
-                            }
+                                    ] 
+                                ],
+                        );
+                        $post_query = new WP_Query($args);
+                        
+                        if($post_query->have_posts() ) {
+                                while($post_query->have_posts() ) {
+                                        $post_query->the_post();
+                            ?>
+                                <div class="trend__item">
+                                        <a href="<?php the_permalink() ?>">
+                                            <div class="trend__img">
+                                                <?php the_post_thumbnail() ?>
+                                            </div>
+                                        </a>
+                                        <div class="trend__details">
+                                        <a href="<?php the_permalink() ?>">
+                                            <h2 class="trend__title"><?php the_title(); ?></h2>
+                                        </a>
+                                            <div class="detail">
+                                                
+                                                <h6><?php echo get_the_tag_list(); ?></h6>
+                                                <p><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/home/trend/time.png" alt=""><?php echo get_the_date('d/m/Y'); ?></p>
+                                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/home/trend/trend-arrow.png" alt="">
+                                            </div>
+                                        </div>
+                                    
+                                </div>
+                            <?php
                         }
+                    }
                 ?>
                             
                                 

@@ -22,6 +22,7 @@
 	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 	<link rel="stylesheet" type="text/css" href="<?php echo resolve_style_filename('assets/css/' . $fileName . '.css') ?>" />
 	<link rel="stylesheet" type="text/css" href="<?php echo resolve_style_filename('assets/css/style.css') ?>" />
+    <link rel="stylesheet" type="text/css" href="<?php echo resolve_style_filename('assets/css/single.css') ?>" />
 	<!-- <link rel="stylesheet" type="text/css" href="<?php echo resolve_style_filename('assets/css/home.css') ?>" /> -->
 	<!-- <link rel="stylesheet" type="text/css" href="<?php echo resolve_style_filename('assets/css/about.css') ?>" />
 	<link rel="stylesheet" type="text/css" href="<?php echo resolve_style_filename('assets/css/blog-details.css') ?>" />

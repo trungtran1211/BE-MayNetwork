@@ -48,6 +48,7 @@ $fileName = get_field("file_name_css") ?? 'home';
      ></script>
     <script src="<?php echo resolve_style_filename('assets/js/'. $fileName . ".js") ?>"></script>
     <script src="<?php echo resolve_style_filename('assets/js/main.js') ?>"></script>
+    <script src="<?php echo resolve_style_filename('assets/js/blog.js') ?>"></script>
 <?php wp_footer(); ?>
 </body>
 

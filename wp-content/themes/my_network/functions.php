@@ -9,6 +9,7 @@ require_once(CORE . '/init.php');
 require_once(CORE . '/menu.php');
 require_once(CORE . '/helper.php');
 require_once(CORE . '/partner.php');
+require_once(CORE . '/duplicate.php');
 
 /**
  * Setup the feature of theme
@@ -44,4 +45,11 @@ function resolve_style_filename($file_path)
     $versionParam = defined('STYLE_VERSION') ? STYLE_VERSION : '1.0.0';
     return get_template_directory_uri() . '/' . trim($file_path) . '?v=' . $versionParam;
 }
+
+
+
+
+
+
+
 
