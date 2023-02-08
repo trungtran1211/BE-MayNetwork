@@ -55,61 +55,8 @@
                             <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/home/logo.png" alt="">
                         </div>
                         <ul>
-                            <div class="header-search mb">
-                                <form action="">
-                                    <div class="search-box search-bg">
-                                        <button class="search-btn">
-                                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/home/search.png" alt="">
-                                        </button>
-                                        <input type="text" class="hide show" placeholder="Search..."/>
-                                      </div>
-                                </form>
-                            </div>
-                            <!-- <li> 
-                                <a href="#">Dịch vụ <i class="fa-regular fa-angle-down"></i></a> 
-                                <ul>
-                                    <li> <a href="#">Xây dựng kênh <i class="fa-regular fa-angle-right pc"></i><i class="fa-regular fa-angle-down mb"></i></a>
-                                        <ul>
-                                            <li> <a href="#">Xây dựng kênh cá nhân</a></li>
-                                            <li> <a href="#">Xây dựng kênh doanh nghiệp</a></li>
-                                            <li> <a href="#">Xây dựng kênh bán hàng</a></li>
-                                        </ul>
-                                    </li>
-                                    <li> <a href="#">Duy trì kênh</a> </li>
-                                    <li> <a href="#">Tư vấn tối ưu kênh</a> </li>
-                                    <li> <a href="#">Quản lý kênh</a> </li>
-                                    <li> <a href="#">Booking KOL/KOC</a> </li>
-                                    <li> <a href="#">Đào tạo <i class="fa-regular fa-angle-right pc"></i><i class="fa-regular fa-angle-down mb"></i></a> 
-                                        <ul>
-                                            <li> <a href="#">Đào tạo inhouse</a></li>
-                                            <li> <a href="#">Đào tạo idol</a></li>
-                                        </ul>
-                                    </li>
-                                    <li> <a href="#">Bảng giá dịch vụ</a> </li>
-                                </ul>
-                            </li>
-                            <li> <a href="#">Đối tác tiêu biểu</a> </li>
-                            <li> <a href="#">Về Mây <i class="fa-regular fa-angle-down"></i></a>
-                                <ul>
-                                    <li> <a href="">Về Mây</a></li>
-                                    <li> <a href="">Tuyển dụng</a></li>
-                                    <li> <a href="">Bạn hỏi - Mây đáp</a></li>
-                                </ul>
-                            </li>
-                            <li> <a href="#">Blog</a> </li>
-                            <li> <a href="#">Liên hệ</a> </li> -->
 							<?php wp_nav_menu(array('theme_location'=>'header-menu','container'=>'', 'items_wrap' => '%3$s')); ?>
                             
-							<div class="header-search pc">
-                                <form action="">
-                                    <div class="search-box" >
-                                        <button class="search-btn">
-                                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/home/search.png" alt="">
-                                        </button>
-                                        <input  type="text" id="search" class="hide"  placeholder="Search..."/>
-                                    </div>
-                                </form>
-                            </div>
                         </ul>
                     </nav>
                 </div>

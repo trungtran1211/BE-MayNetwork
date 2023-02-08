@@ -298,9 +298,6 @@
 .box1sv__row2 .box1sv__col:nth-child(2) {
     margin-top: -40px;
 }
-.box1sv__row2 {
-    margin-bottom: 24px;
-}
 .box1sv__button {
     display: flex;
     justify-content: center;
@@ -358,6 +355,7 @@
         flex-direction: column;
         gap: 18px 117px;
         justify-content: center;
+        margin-bottom: 20px;
     }
     .box1sv__row2 .box1sv__col:nth-child(2) {
         margin-top: 0px;
@@ -415,7 +413,7 @@
     border-radius: 40px; 
     padding: 32px 0;
     position: relative;
-    margin-top: -60px;
+    margin-top: -53px;
     z-index: 0;
 }
 .ct-may1 {
@@ -969,7 +967,7 @@
         content: url(../images/home/parther/bg-avtmb.png);
         position: absolute;
         top: -44px;
-        left: 48%;
+        left: 49%;
         transform: translateX(-50%);
     }
     .profile {
@@ -1032,6 +1030,9 @@
         object-fit: cover;
         border-radius: 50%;
         cursor: pointer;
+    }
+    .profile .partner-btn {
+        margin-bottom: 24px;
     }
     .nav__item.slick-slide.slick-current img {
         border: 2px solid #25B9FC;
@@ -1171,6 +1172,9 @@
     -webkit-box-orient: vertical;
     text-transform: uppercase;
 }
+.trend__img img {
+    height: 288px;
+}
 .detail {
     display: flex;
     justify-content: space-between;
@@ -1251,7 +1255,7 @@
 }
 @media screen and (max-width: 1024px) {
     .trend {
-        margin-top: 105px;
+        margin-top: 135px;
         margin-bottom: 30px;
     }
     .progressTrend {
@@ -1327,7 +1331,7 @@
 
 @media screen and (max-width: 500px) {
     .trend {
-        margin-top: 500px;
+        margin-top: 430px;
         margin-bottom: 30px;
     }
 }
@@ -1343,6 +1347,13 @@
         object-fit: cover;
         border-radius: 50%;
         cursor: pointer;
+    }
+    .trend__img img {
+        height: 190px;
+    }
+    .detail h6 a {
+        font-size: 14px;
+        line-height: 16px;
     }
 }
 @media screen and (max-width: 350px) {
@@ -1433,6 +1444,7 @@
 
     color: #0EA5E9;
     text-shadow: 4px 0 #fff, -4px 0 #fff, 0 4px #fff, 0 -4px #fff, 3px 3px #fff, -3px -3px #fff, 3px -3px #fff, -3px 3px #fff;
+    text-transform: uppercase;
 }
 .service-heading h2  span {
     color: #0C4A6E;

@@ -269,10 +269,10 @@ details[open] > summary::after {
 .qs__row {
     display: flex;
     flex-wrap: wrap;
-    gap: 0 39px;
+    gap: 0 40px;
 }
 .qs__col-6 {
-    width: calc(50% - 39px) ;
+    width: calc(50% - 20px) ;
 }
 .qs__col-12 {
     width: 100%;
@@ -357,7 +357,44 @@ textarea.qs__form-control {
     transition: .5s linear;
 }
 
-
+.error {
+    font-family: var(--font-medium);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.005em;
+    color: #ff0000;
+    display: block;
+    margin-top: 5px;
+}
+.wpcf7-not-valid-tip {
+    display: none !important;
+}
+.wpcf7 form.invalid .wpcf7-response-output, .wpcf7 form.unaccepted .wpcf7-response-output, .wpcf7 form.payment-required .wpcf7-response-output {
+    font-family: var(--font-medium);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.005em;
+    color: #ff0000;
+    display: block;
+    margin-top: 15px;
+    border-radius: 10px;
+}
+.wpcf7 form.sent .wpcf7-response-output {
+    font-family: var(--font-medium);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.005em;
+    color: #46b450;
+    display: block;
+    margin-top: 15px;
+    border-radius: 10px;
+}
 @media screen and (min-width: 1919px) {
     details {
         margin-bottom: 28px;

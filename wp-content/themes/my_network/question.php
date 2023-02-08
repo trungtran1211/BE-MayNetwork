@@ -138,7 +138,7 @@ get_header(); ?>
                         </div>
                     </div>
                     <?php
-                        echo do_shortcode( '[contact-form-7 id="195" title="question"]' );
+                        echo do_shortcode( '[contact-form-7 id="195" title="question" html_name="question"]' );
                     ?>
                     <!-- <form action="" class="qs__form">
                         <div class="qs__row">

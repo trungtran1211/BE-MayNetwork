@@ -88,7 +88,7 @@ get_header(); ?>
                     <div class="ct__register-right">
                         <h2 class="ct__register-formtitle">ĐĂNG KÝ HỢP TÁC</h2>
                         <?php
-                            echo do_shortcode( '[contact-form-7 id="198" title="Contact"]' );
+                            echo do_shortcode( '[contact-form-7 id="198" title="Contact" html_name="contact"]' );
                         ?>
                         <!-- <form action="ct__register-form">
                             <div class="ct_form-item">

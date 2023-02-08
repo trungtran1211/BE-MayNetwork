@@ -110,7 +110,17 @@ $(document).ready(function() {
         pauseOnHover:false,
         responsive: [
           {
-            breakpoint: 768,
+            breakpoint: 769,
+            settings: {
+              arrows: false,
+              slidesToShow: 2,
+              slidesToScroll: 1,
+              centerMode: true,
+              centerPadding: '20px',
+            }
+          },
+          {
+            breakpoint: 500,
             settings: {
               arrows: false,
               slidesToShow: 1,

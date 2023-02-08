@@ -29,14 +29,32 @@
                             Tin tức khác
                         </h2>
                         <div class="blog__news-list">
-                            <div class="blog__news-item">
-                                 <div class="news-img">
-                                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/blog-details/blog__news-item1.png" alt="">
-                                 </div>
-                                 <span><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/blog-details/icon-time1.png" alt="">07/12/2022 </span>
-                                 <p>Người trẻ Trung Quốc thích gõ mõ trực tuyến</p>
-                            </div>
-                            <div class="blog__news-item">
+                        <?php
+                            $args = array(
+                                'post_type'      => 'post',
+                                'orderby'        => 'rand',
+                                'posts_per_page' => '5',
+                            );
+                            $post_query = new WP_Query($args);
+
+                            if($post_query->have_posts() ) {
+                                while($post_query->have_posts() ) {
+                                        $post_query->the_post();
+                                    ?>
+                                        <div class="blog__news-item">
+                                            <div class="news-img">
+                                                <?php the_post_thumbnail() ?>
+                                            </div>
+                                            <div class="blog__news-bt">
+                                                <span><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/blog-details/icon-time1.png" alt=""><?php echo get_the_date('d/m/Y'); ?></span>
+                                                <p><?php the_title(); ?></p>
+                                            </div>
+                                        </div>
+                                    <?php
+                                }
+                            }
+                        ?>        
+                            <!-- <div class="blog__news-item">
                                 <div class="news-img">
                                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/blog-details/blog__news-item2.png" alt="">
                                 </div>
@@ -63,7 +81,7 @@
                                 </div>
                                 <span><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/blog-details/icon-time1.png" alt="">07/12/2022 </span>
                                 <p>Người trẻ Trung Quốc thích gõ mõ trực tuyến</p>
-                            </div>
+                            </div> -->
                            
                         </div>
                     </div>
