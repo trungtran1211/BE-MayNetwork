@@ -2,6 +2,7 @@
 /**
  * The template for displaying the footer
  */
+wp_reset_postdata();
 $fileName = get_field("file_name_css") ?? 'home';
 ?>
 </main>
@@ -29,7 +30,7 @@ $fileName = get_field("file_name_css") ?? 'home';
         </div>
     </footer>
      
-
+    
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
       AOS.init();
@@ -46,11 +47,8 @@ $fileName = get_field("file_name_css") ?? 'home';
        type="text/javascript"
        src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
      ></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.16.0/jquery.validate.min.js"></script>
     <script src="<?php echo resolve_style_filename('assets/js/'. $fileName . ".js") ?>"></script>
     <script src="<?php echo resolve_style_filename('assets/js/main.js') ?>"></script>
-    <script src="<?php echo resolve_style_filename('assets/js/blog.js') ?>"></script>
 <?php wp_footer(); ?>
 </body>
 

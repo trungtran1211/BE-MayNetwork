@@ -16,3 +16,4 @@ btnmenu.onclick = () => {
 btnclosemenu.onclick = () => {
   listmenu.classList.toggle("show-menu");
 }
+

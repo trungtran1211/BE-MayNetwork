@@ -9,6 +9,7 @@ require_once(CORE . '/init.php');
 require_once(CORE . '/menu.php');
 require_once(CORE . '/helper.php');
 require_once(CORE . '/partner.php');
+require_once(CORE . '/question.php');
 require_once(CORE . '/duplicate.php');
 
 /**
@@ -46,9 +47,11 @@ function resolve_style_filename($file_path)
     return get_template_directory_uri() . '/' . trim($file_path) . '?v=' . $versionParam;
 }
 
-
-
-
+function custom_filter_wpcf7_is_tel( $result, $tel ){ 
+    $result = preg_match( '/^(09|03|07|08|05)+([0-9]{8})$/', $tel ); 
+    return $result; 
+  } 
+  add_filter( 'wpcf7_is_tel', 'custom_filter_wpcf7_is_tel', 10, 2 );
 
 
 

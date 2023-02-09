@@ -314,6 +314,7 @@
     text-fill-color: transparent;
 }
 
+
 .ct__register-right {
     padding: 24px;
     background: #38BDF8;
@@ -369,7 +370,6 @@
     /* Slate/400 */
 
     color: #94A3B8;
-    z-index: 2;
 }
 .holder {
     position: absolute;
@@ -380,8 +380,17 @@
     font-style: normal;
     font-weight: 500;
     font-size: 20px;
+    z-index: 1;
 }
-    
+
+.ct_form-input::placeholder {
+    color: #94A3B8;
+    cursor: auto;
+    font-family: var(--font-medium);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+}  
 .red{
     color: red;
 }
@@ -445,9 +454,7 @@
     display: block;
     margin-top: 5px;
 }
-.wpcf7-not-valid-tip {
-    display: none !important;
-}
+
 .wpcf7 form.invalid .wpcf7-response-output, .wpcf7 form.unaccepted .wpcf7-response-output, .wpcf7 form.payment-required .wpcf7-response-output {
     font-family: var(--font-medium);
     font-style: normal;
@@ -466,12 +473,14 @@
     font-size: 16px;
     line-height: 24px;
     letter-spacing: 0.005em;
-    color: #46b450;
+    color: #ffffff;
     display: block;
     margin-top: 15px;
     border-radius: 10px;
 }
-
+.wpcf7-not-valid-tip {
+    display: none !important;
+}
 @media screen and (max-width: 1024px) {
     .ct__register::before {
         content: "";
