@@ -232,6 +232,7 @@
     padding: 21px 189px 21px 18px;
     background: linear-gradient(105.87deg, rgba(21, 174, 239, 0.88) 26.27%, rgba(21, 123, 167, 0.37) 98.46%);
     border-radius: 0px 0px 12px 12px;
+    width: 100%;
 }
 .blog__all-list .blog__all-item:first-child .blog__item-content .blog__item-title  {
     font-family: var(--font-black);

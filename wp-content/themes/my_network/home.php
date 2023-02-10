@@ -258,7 +258,11 @@ get_header();
                                 <div class="trend__item">
                                         <a href="<?php the_permalink() ?>">
                                             <div class="trend__img">
-                                                <?php the_post_thumbnail() ?>
+                                                <?php 
+                                                    $image = get_field('anh_xu_huong');
+                                                    if( !empty($image) ): ?>
+                                                    <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+                                                <?php endif; ?>
                                             </div>
                                         </a>
                                         <div class="trend__details">
