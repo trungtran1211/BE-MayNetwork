@@ -7,12 +7,12 @@
 get_header(); ?>
    
         <div class="question">
-            <h1 class="question__heading"><span>BẠN HỎI - MÂY ĐÁP</span></h1>
+            <h1 class="question__heading" data-aos="fade-up" data-aos-duration="1000"><span>BẠN HỎI - MÂY ĐÁP</span></h1>
             <div class="qs__bg">
                 <!-- <img class="w-100" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/question/qs-bg.png" alt=""> -->
                 <div  class="container">
                     <div class="question__list">
-                        <h2 class="qs__title">Câu hỏi từng gặp</h2>
+                        <h2 class="qs__title" data-aos="fade-up" data-aos-duration="1000">Câu hỏi từng gặp</h2>
                         <?php
                             $orderNumber = 1;
                             $args = array(
@@ -42,7 +42,7 @@ get_header(); ?>
                                 while ($the_query->have_posts()) :
                                     $the_query->the_post();
                         ?>
-                            <details>
+                            <details data-aos="fade-up" data-aos-duration="1000">
                                 <summary>
                                     <h3 class="qs__number">
                                         <?php if ($orderNumber < 10) {
@@ -59,7 +59,7 @@ get_header(); ?>
                             </details>
                         <?php endwhile; endif; ?>
                         
-                        <h2 class="qs__title">Về đào tạo TALENT</h2>
+                        <h2 class="qs__title" data-aos="fade-up" data-aos-duration="1000">Về đào tạo TALENT</h2>
                         <?php
                             $args = array(
                                 'post_type'        => 'question',
@@ -88,7 +88,7 @@ get_header(); ?>
                                 while ($the_query->have_posts()) :
                                     $the_query->the_post();
                         ?>
-                            <details>
+                            <details data-aos="fade-up" data-aos-duration="1000">
                                 <summary>
                                     <h3 class="qs__number">
                                         <?php if ($orderNumber < 10) {
@@ -104,7 +104,7 @@ get_header(); ?>
                                 </div>
                             </details>
                         <?php endwhile; endif; ?>
-                        <h2 class="qs__title">Về TIKTOK SHOP</h2>
+                        <h2 class="qs__title" data-aos="fade-up" data-aos-duration="1000">Về TIKTOK SHOP</h2>
                         <?php
                             $args = array(
                                 'post_type'        => 'question',
@@ -133,7 +133,7 @@ get_header(); ?>
                                 while ($the_query->have_posts()) :
                                     $the_query->the_post();
                         ?>
-                            <details>
+                            <details data-aos="fade-up" data-aos-duration="1000">
                                 <summary>
                                     <h3 class="qs__number">
                                         <?php if ($orderNumber < 10) {
@@ -149,7 +149,7 @@ get_header(); ?>
                                 </div>
                             </details>
                         <?php endwhile; endif; ?>
-                        <h2 class="qs__title">Về LIVESTREAM</h2>
+                        <h2 class="qs__title" data-aos="fade-up" data-aos-duration="1000">Về LIVESTREAM</h2>
                         <?php
                             $args = array(
                                 'post_type'        => 'question',
@@ -178,7 +178,7 @@ get_header(); ?>
                                 while ($the_query->have_posts()) :
                                     $the_query->the_post();
                         ?>
-                            <details>
+                            <details data-aos="fade-up" data-aos-duration="1000">
                                 <summary>
                                     <h3 class="qs__number">
                                     <?php if ($orderNumber < 10) {
@@ -199,13 +199,16 @@ get_header(); ?>
             </div>
         </div>
         <div class="qs__contact">
+            <div class="qs__contact-may" data-aos="fade-right" data-aos-duration="1000">
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/question/may.png" alt="">
+            </div>
             <div class="container">
                 <div class="qs__contact-container">
-                    <div class="qs__contact-heading">VẪN CÒN THẮC MẮC? <br>
+                    <div class="qs__contact-heading" data-aos="fade-up" data-aos-duration="1000">VẪN CÒN THẮC MẮC? <br>
                         <span>THẢ NÓ TẠI ĐÂY!</span>
                     </div>
                     <div class="qs__contact-info">
-                        <div class="qs__contact-mail">
+                        <div class="qs__contact-mail" data-aos="fade-right" data-aos-duration="1000">
                             <div>
                                 <div class="mail-icon">
                                     <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/question/mail.png" alt="">
@@ -214,7 +217,7 @@ get_header(); ?>
                             </div>
                             <span class="contact-content" >contactforwork@maynetwork.tv</span>
                         </div>
-                        <div class="qs__contact-phone">
+                        <div class="qs__contact-phone" data-aos="fade-left" data-aos-duration="1000">
                             <div>
                                 <div class="mail-icon">
                                     <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/question/phone.png" alt="">

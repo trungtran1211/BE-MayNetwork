@@ -191,7 +191,7 @@
 				<div class="blog__recentposts-list">
 				<?php
 					$args = array(
-						'posts_per_page' => 6, /* how many post you need to display */
+						'posts_per_page' => 5, /* how many post you need to display */
 						'offset' => 0,
 						'orderby' => 'post_date',
 						'order' => 'DESC',

@@ -166,14 +166,13 @@ details[open] > summary::after {
     position: relative;
     background: url("../images/question/qs-bg2.png") no-repeat;
     background-size: cover;
-    margin-top: -124px;
+    margin-top: -150px;
     position: relative;
 }
-.qs__contact::after {
-    content: url("../images/question/may.png");
+.qs__contact-may{
     position: absolute;
-    top: -85px;
-    left: 20px;
+    top: -70px;
+    left: 15px;
 }
 .qs__contact-container {
     padding: 76px 0 112px;
@@ -218,6 +217,7 @@ details[open] > summary::after {
 
     box-shadow: 0px 3px 16px rgba(45, 194, 227, 0.24);
     border-radius: 50px;
+    width: 50%;
 }
 .qs__contact-phone > div,
 .qs__contact-mail > div {
@@ -258,6 +258,7 @@ details[open] > summary::after {
     border: 0.812828px solid #E8E8E8;
     box-shadow: 0px 3px 16px rgba(45, 194, 227, 0.24);
     border-radius: 50px;
+    width: 50%;
 }
 .qs__form {
     padding: 59px 62px 24px 62px;
@@ -423,6 +424,24 @@ textarea.qs__form-control {
         color: #475569;
         max-width: 80%;
     }
+    .qs__contact-info {
+        gap: 5px 21px;
+        margin-bottom: 10px;
+        flex-direction: column;
+    }
+    .qs__contact-phone,
+    .qs__contact-mail {
+        padding: 6px 12px;
+        width: 100%;
+        justify-content: space-between;
+    }
+    .qs__contact {
+        position: relative;
+        background: url(../images/question/qs-bg2.png) no-repeat center;
+        /* background-size: cover; */
+        margin-top: -68px;
+        position: relative;
+    }
 }
 @media screen and (max-width: 768px){
     .question__heading span {
@@ -438,19 +457,33 @@ textarea.qs__form-control {
     .question__heading span::before {
     content: url(../images/question/shape1mb.png);
     position: absolute;
-    top: -1px;
-    left: -60px;
+    top: -3px;
+    left: -50px;
     }
     .question__heading span::after {
         content: url(../images/question/shape2mb.png);
         position: absolute;
         top: -3px;
-        right: -60px;
+        right: -50px;
     }
     .question__heading {
         text-align: center;
-        margin-bottom: 8px;
+        margin-bottom: 0px;
         position: relative;
+    }
+    .question__heading::after {
+        content: "";
+        position: absolute;
+        bottom: -5px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 70px;
+        height: 2px;
+        background: #FFFFFF;
+        border-radius: 34px;
+    }
+    .question__list {
+        margin-top: 22px;
     }
     .qs__title {
         padding: 0px 0 11px;
@@ -528,6 +561,12 @@ textarea.qs__form-control {
     .qs__contact {
         padding: 0 16px;
     }
+    .qs__contact-may {
+        position: absolute;
+        top: -35px;
+        max-width: 105px;
+        left: 0px;
+    }
     .qs__contact-container .qs__contact-heading {
         font-size: 18px;
         line-height: 27px;
@@ -535,17 +574,6 @@ textarea.qs__form-control {
     }
     .qs__contact-container {
         padding: 25px 0 24px;
-    }
-    .qs__contact-info {
-        gap: 5px 21px;
-        margin-bottom: 10px;
-        flex-direction: column;
-    }
-    .qs__contact-phone,
-    .qs__contact-mail {
-        padding: 6px 12px;
-        width: 100%;
-        justify-content: space-between;
     }
     .qs__contact-phone div,
     .qs__contact-mail div {
@@ -601,12 +629,20 @@ textarea.qs__form-control {
     }
     input.qs__form-control {
         height: 45px;
+        border-radius: 20px;
     }
     .qs_form-group {
         margin-bottom: 12px;
     }
     .qs_form-group2 {
         margin-bottom: 18px;
+    }
+    textarea.qs__form-control {
+        min-height: 85px;
+        padding-top: 19px;
+        padding-bottom: 13px;
+        resize: none;
+        border-radius: 20px;
     }
     .qs__form-btn {
         padding: 10px 11px;
@@ -616,6 +652,29 @@ textarea.qs__form-control {
     }
     .qs__form-btn img {
         max-width: 15px;
+    }
+    .error {
+        font-family: var(--font-medium);
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 24px;
+        letter-spacing: 0.005em;
+        color: #ff0000;
+        display: block;
+        margin-top: 0px;
+    }
+    .wpcf7 form.invalid .wpcf7-response-output, .wpcf7 form.unaccepted .wpcf7-response-output, .wpcf7 form.payment-required .wpcf7-response-output {
+        font-family: var(--font-medium);
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 24px;
+        letter-spacing: 0.005em;
+        color: #ff0000;
+        display: block;
+        margin-top: 15px;
+        border-radius: 10px;
     }
 }
 
@@ -627,8 +686,8 @@ textarea.qs__form-control {
         font-family: var(--font-semibold);
         font-style: normal;
         font-weight: 600;
-        font-size: 20px;
-        line-height: 24px;
+        font-size: 11px;
+        line-height: 13px;
         display: flex;
         align-items: center;
         letter-spacing: 0.005em;

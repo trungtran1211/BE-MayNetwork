@@ -52,7 +52,9 @@
                     <nav id="wrap" class="main-menu">
                         <a class="menu-close mb"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/home/menu/icon-menu2.png" alt=""></a>
                         <div class="logo mb">
-                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/home/logo.png" alt="">
+                            <a href="<?php echo home_url(); ?>">
+                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/home/logo.png" alt="">
+                            </a>
                         </div>
                         <ul>
 							<?php wp_nav_menu(array('theme_location'=>'header-menu','container'=>'', 'items_wrap' => '%3$s')); ?>

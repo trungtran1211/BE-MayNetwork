@@ -9,7 +9,7 @@ get_header(); ?>
 <div class="ct__top">
             <div class="container">
                 <div class="ct__top-container">
-                    <div class="ct__top-left">
+                    <div class="ct__top-left" data-aos="fade-right" data-aos-duration="1000">
                         <h2 class="ct__top-heading1">BẠN ĐÃ SẴN SÀNG</h2>
                         <h1 class="ct__top-heading2">MỞ KHOÁ CÁNH CỬA VIRAL TIKTOK?</h1>
                         <a href="#">
@@ -18,32 +18,35 @@ get_header(); ?>
                             </button>
                         </a>
                     </div>
-                    <div class="ct__top-right">
+                    <div class="ct__top-right" data-aos="fade-left" data-aos-duration="1000" >
                         <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/contact/ct-banner.png" alt="">
                     </div>
                 </div>
             </div>
         </div>
         <div class="ct__info">
+            <div class="ct__info-may pc" data-aos="fade-right" data-aos-duration="1000">
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/contact/ct-may.png" alt="">
+            </div>
             <div class="container">
                 <div class="ct__info-container">
                     <div class="ct__info-left">
                         <h1 class="ct__info-heading">THÔNG TIN LIÊN HỆ</h1>
                         <div class="ct__info-list">
-                            <div class="ct__info-item">
+                            <div class="ct__info-item" data-aos="fade-right" data-aos-duration="1000">
                                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/contact/ct-phone.png" alt="">
                                 <span>(+84) 385691989</span>
                             </div>
-                            <div class="ct__info-item">
+                            <div class="ct__info-item" data-aos="fade-right" data-aos-duration="1000">
                                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/contact/ct-mail.png" alt="">
                                 <span>contactforwork@maynetwork.tv</span>
                             </div>
-                            <div class="ct__info-item">
+                            <div class="ct__info-item" data-aos="fade-right" data-aos-duration="1000">
                                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/contact/ct-address.png" alt="">
                                 <span>67 Hoàng Văn Thái, Phường Tân Phú, Quận 7 Thành phố Hồ Chí Minh</span>
                             </div>
                         </div>
-                        <div class="ct__info-social">
+                        <div class="ct__info-social" data-aos="fade-right" data-aos-duration="1000">
                             <a href="#"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/contact/ct-fb.png" alt=""></a>
                             <a href="#"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/contact/ct-ig.png" alt=""></a>
                             <a href="#"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/contact/ct-in.png" alt=""></a>
@@ -59,62 +62,32 @@ get_header(); ?>
         </div>
         <div class="ct__register">
             <div class="container">
-                <h2 class="ct__register-heading">QUY TRÌNH VÀ CÁCH THỨC ĐĂNG KÝ</h2>
+                <h2 class="ct__register-heading" data-aos="fade-up" data-aos-duration="1000">QUY TRÌNH VÀ CÁCH THỨC ĐĂNG KÝ</h2>
                 <div class="ct__register-container">
                     <div class="ct__register-left">
                         <div class="ct__register-steps">
-                            <div class="step">
-                                <!-- <h3 class="step-heading">Bước 1</h3>
-                                <span class="step-text">Đăng ký hợp tác tại maynetwork.com</span> -->
+                            <div class="step" data-aos="fade-right" data-aos-duration="1000">
                                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/contact/step1.png" alt="">
                             </div>
-                            <div class="step">
-                                <!-- <h3 class="step-heading">Bước 2</h3>
-                                <span class="step-text">Lựa chọn nhu cầu dịch vụ phù hợp</span> -->
+                            <div class="step" data-aos="fade-right" data-aos-duration="1000">
                                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/contact/step2.png" alt="">
                             </div>
-                            <div class="step">
-                                <!-- <h3 class="step-heading">Bước 3</h3>
-                                <span class="step-text">Bắt đầu thử nghiệm và đánh giá</span> -->
+                            <div class="step" data-aos="fade-right" data-aos-duration="1000">
                                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/contact/step3.png" alt="">
                             </div>
-                            <div class="step">
-                                <!-- <h3 class="step-heading">Bước 4</h3>
-                                <span class="step-text">Hợp tác chính thức</span> -->
+                            <div class="step" data-aos="fade-right" data-aos-duration="1000">
                                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/contact/step4.png" alt="">
                             </div>
                         </div>
                     </div>
                     <div class="ct__register-right">
-                        <h2 class="ct__register-formtitle">ĐĂNG KÝ HỢP TÁC</h2>
+                        <h2 class="ct__register-formtitle" data-aos="fade-left" data-aos-duration="1000">ĐĂNG KÝ HỢP TÁC</h2>
                         <?php
                             echo do_shortcode( '[contact-form-7 id="198" title="Contact" html_name="contact"]' );
                         ?>
-                        <!-- <form action="ct__register-form">
-                            <div class="ct_form-item">
-                                <div class="holder">Họ và Tên <span class="red">*</span></div>
-                                <input id="input" class="ct_form-input" type="text" />
-                            </div>
-                            <div class="ct_form-item">
-                                <div class="holder">Email <span class="red">*</span></div>
-                                <input id="input" class="ct_form-input" type="text" />
-                            </div>
-                            <div class="ct_form-item">
-                                <div class="holder">Số điện thoại <span class="red">*</span></div>
-                                <input id="input" class="ct_form-input" type="text" />
-                            </div>
-                            <div class="ct_form-item">
-                                <div class="holder">Tài khoản Tiktok của bạn <span class="red">*</span></div>
-                                <input id="input" class="ct_form-input" type="text" />
-                            </div>
-                            <div class="ct_form-item">
-                                <div class="holder">Để lại lời nhắn cho chúng tôi</div>
-                                <input id="input" class="ct_form-input" type="text" />
-                            </div>
-                            <div class="ct_form-btn">
-                                <button class="ct-btn">Gửi thông tin <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/contact/ct-icondrop2.png" alt=""></button>
-                            </div>
-                        </form> -->
+                        <div class="ct__register-right-may pc" data-aos="fade-left" data-aos-duration="1000">
+                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/contact/ct-may2.png" alt="">
+                        </div>
                     </div>
                 </div>
             </div>
