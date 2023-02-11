@@ -114,7 +114,7 @@
 }
 .recentposts-left img {
     border-radius: 11px;
-    height: auto;
+    height: 96px;
 }
 .recentposts-right {
     max-width: 292px;
@@ -338,7 +338,18 @@
     .blog__listpost-right {
         width: 100%;
     }
-   
+    .blog__all-list .blog__all-item:first-child .blog__item-img img {
+        vertical-align: top;
+        border-radius: 12px;
+        width: 100%;
+        height: auto;
+    }
+    .blog__all-list .blog__all-item .blog__item-img img {
+        vertical-align: top;
+        border-radius: 12px;
+        width: 100%;
+        height: auto;
+    }
 }
 @media screen and (max-width: 768px) {
     .blog__all {
@@ -505,6 +516,10 @@
     }
     .recentpost-btn img {
         max-width: 11px;
+    }
+    .recentposts-left img {
+        border-radius: 11px;
+        height: 78px;
     }
 }
 @media screen and (max-width: 375px) {
@@ -714,33 +729,34 @@
     }
     .slick-prev {
         position: absolute;
-        top: -6px;
-        right: 40px;
+        top: -2px;
+        right: 35px;
         background: #E5E7EB;
-        border-radius: 18.5882px;
+        border-radius: 12.5882px;
         border: none;
         outline: none;
         color: #38BDF8;
-        padding: 7px 11px;
+        padding: 4px 10px;
         cursor: pointer;
         transition: all .3s linear;
     }
     .slick-next {
         position: absolute;
-        top: -6px;
+        top: -2px;
         right: 0;
         background: #E5E7EB;
         border-radius: 18.5882px;
         border: none;
         outline: none;
         color: #38BDF8;
-        padding: 7px 11px;
+        padding: 4px 10px;
         cursor: pointer;
         transition: all .3s linear;
     }
     .listnews-img img {
         max-width: 319px;
         border-radius: 12px;
+        height: auto;
         margin: 0 auto;
     }
     .listnew-title {
@@ -818,6 +834,7 @@
     position: relative;
     z-index: 1;
     overflow: hidden;
+    border: 3px solid #e8e8e899;
 }
 .blog__bottom-title {
     font-family: var(--font-black);
@@ -867,8 +884,8 @@
         left: -11px;
     }
     .blog__may2 {
-        max-width: 142px;
-        bottom: -77px;
+        max-width: 100px;
+        bottom: -50px;
     }
     .blog__bottom-container {
         flex-direction: column;
@@ -878,6 +895,7 @@
     }
     .blog__bottom {
         padding: 14px 16px;
+        margin-bottom: 0;
     }
     .blog__bottom-container .avt {
         max-width: 143px;
@@ -898,5 +916,6 @@
     .blog__bottom-btn img {
         max-width: 15px;
     }
+    
 }
 /* /////////////////////////////////// */

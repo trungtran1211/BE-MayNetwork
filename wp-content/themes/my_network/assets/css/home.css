@@ -256,6 +256,7 @@
     padding: 0px;
     width: 240px;
     margin-top: -19px;
+    z-index: 10;
 }
 .box1sv__col ul ul li {
     padding: 6px 20px;
@@ -1323,6 +1324,9 @@
         top: -2px;
         right: -25px;
     }
+}
+.menu-image-title-after.menu-image-not-hovered img, .menu-image-hovered.menu-image-title-after .menu-image-hover-wrapper, .menu-image-title-before.menu-image-title {
+    padding-right: 0 !important;
 }
 @media screen and (max-width: 768px) {
     .trend {

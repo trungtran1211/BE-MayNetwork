@@ -216,12 +216,12 @@
         background: linear-gradient(91.91deg, #25B9FC 2.93%, #0EC2E9 99.69%);
         border-radius: 0.943056px;
     }
-    .details-text {
+    .blog__details-content p {
         font-size: 12px;
         line-height: 16px;
         margin-bottom: 12px;
     }
-    .details-title {
+    .blog__details-content h5  {
         font-size: 12px;
         line-height: 16px;
         margin: 11px 0;
@@ -232,6 +232,10 @@
         justify-content: space-between;
         gap: 18px 14px;
         flex-wrap: wrap;
+    }
+    .blog__news-heading {
+        font-size: 20px;
+        line-height: 32px;
     }
     .blog__news-item {
         width: calc(50% - 11.5px);
