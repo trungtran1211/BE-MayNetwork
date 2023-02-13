@@ -42,7 +42,7 @@ get_header(); ?>
                                 while ($the_query->have_posts()) :
                                     $the_query->the_post();
                         ?>
-                            <details data-aos="fade-up" data-aos-duration="1000">
+                            <details class="details-animated" data-aos="fade-up" data-aos-duration="1000">
                                 <summary>
                                     <h3 class="qs__number">
                                         <?php if ($orderNumber < 10) {

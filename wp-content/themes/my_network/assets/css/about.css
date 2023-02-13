@@ -521,7 +521,7 @@
     display: grid;
     grid-template-columns: auto auto auto;
     grid-template-rows: 25fr 25fr;
-    gap: 14px 20px;
+    gap: 30px 20px;
 }
 .box4-item {
     border-radius: 18px;
@@ -641,6 +641,12 @@
     .box4-item:last-child {
         grid-column-start: 1;
         grid-column-end: 6;
+    }
+    .about__box4-container {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: 25fr 25fr;
+        gap: 14px 20px;
     }
     
 }

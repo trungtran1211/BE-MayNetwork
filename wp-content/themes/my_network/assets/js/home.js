@@ -143,23 +143,23 @@ $(document).ready(function() {
 // $('[data-aos]').parent().addClass('hideOverflowOnMobile');
 
 
-// menu
+// // menu
 
-const btnmenu = document.querySelector(".iconmenu");
-const listmenu = document.querySelector(".main-menu");
-const btnclosemenu = document.querySelector(".menu-close");
+// const btnmenu = document.querySelector(".iconmenu");
+// const listmenu = document.querySelector(".main-menu");
+// const btnclosemenu = document.querySelector(".menu-close");
 
-btnmenu.onclick = () => {
-  listmenu.classList.toggle("show-menu");
-}
+// btnmenu.onclick = () => {
+//   listmenu.classList.toggle("show-menu");
+// }
 
-btnclosemenu.onclick = () => {
-  listmenu.classList.toggle("show-menu");
-}
+// btnclosemenu.onclick = () => {
+//   listmenu.classList.toggle("show-menu");
+// }
 
-jQuery(document).ready(function($){
-  $('.search-box').hover(
-       function(){  $(this).addClass("search-bg") },
-       function(){ $(this).removeClass('search-bg') }
-  )
-});
+// jQuery(document).ready(function($){
+//   $('.search-box').hover(
+//        function(){  $(this).addClass("search-bg") },
+//        function(){ $(this).removeClass('search-bg') }
+//   )
+// });

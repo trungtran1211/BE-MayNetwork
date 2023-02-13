@@ -1159,6 +1159,7 @@
 .trend__item .trend__details {
     padding: 23px;
 }
+
 .trend__details .trend__title {
     font-family: var(--font-black);
     font-style: normal;
@@ -1338,7 +1339,7 @@
         line-height: 19px;
     }
     .trend__img img {
-        height: 253px;
+        height: auto;
     }
 }
 
@@ -1361,9 +1362,7 @@
         border-radius: 50%;
         cursor: pointer;
     }
-    .trend__img img {
-        height: 190px;
-    }
+   
     .detail h6 a {
         font-size: 14px;
         line-height: 16px;

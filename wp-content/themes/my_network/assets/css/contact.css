@@ -554,6 +554,41 @@
         font-size: 13px;
         line-height: 14px;
     }
+    input::placeholder {
+        font-family: 'SF Pro Rounded';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px !important;
+        line-height: 14px !important;
+        letter-spacing: 0.005em;
+    
+        /* Slate/400 */
+    
+        color: #94A3B8;
+    
+    }
+    .error {
+        font-family: var(--font-medium);
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 16px;
+        letter-spacing: 0.005em;
+        color: #ff0000;
+        display: block;
+        margin-top: 5px;
+    }
+    .wpcf7 form.invalid .wpcf7-response-output, .wpcf7 form.unaccepted .wpcf7-response-output, .wpcf7 form.payment-required .wpcf7-response-output {
+        font-family: var(--font-medium);
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 14px;
+        letter-spacing: 0.005em;
+        color: #ff0000;
+        display: block;
+        border-radius: 10px;
+    }
     .holder {
         position: absolute;
         margin: 13px;

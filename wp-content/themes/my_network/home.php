@@ -24,7 +24,9 @@ get_header();
                         </a>
                     </div>
                     <div class="banner-right" data-aos="fade-left" data-aos-duration="1000">
-                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/home/img-banner.png" alt="">
+                        <?php if(get_theme_mod("header_image")) :?>
+                            <img src="<?php echo esc_url(get_theme_mod('header_image'))?>" alt="banner" >
+                        <?php endif;?>
                     </div>
                 </div>
             </div>
